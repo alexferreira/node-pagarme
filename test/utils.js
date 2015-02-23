@@ -43,6 +43,23 @@ var utils = module.exports = {
         born_at: '1984-10-12'
       }
     }, params);
-  }
+  },
+
+  getPlanObj: function (params) {
+    params = params || {};
+
+    return _.extend({
+      name: 'Basico',
+      amount: 2990,
+      days: 30,
+      trial_days: 10,
+      payment_methods: ['credit_card', 'boleto'],
+      charges: 4,
+      installments: 1
+    }, params);
+  },
 
 };
+
+
+
