@@ -7,9 +7,7 @@ var utils = require('./utils');
 var PagarMe = utils.pagarMe;
 var plans = PagarMe.plans;
 
-var info = {
-
-};
+var info = {};
 
 var testPlanResponse = function (plan) {
   plan.id.should.be.ok;
