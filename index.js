@@ -1,7 +1,8 @@
 var models = {
   plans: require('./lib/plans'),
   transactions: require('./lib/transactions'),
-  subscriptions: require('./lib/subscriptions')
+  subscriptions: require('./lib/subscriptions'),
+  card: require('./lib/card')
 };
 
 function PagarMe (key) {
