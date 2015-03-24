@@ -1,12 +1,12 @@
 'use strict';
 
-var _ = require('underscore');
+var _ = require('lodash');
 
 var utils = module.exports = {
-  pagarMe: require('../index')('ak_test_wk9GE9OuuXKNd9o7H3u1RxFCFsApw8'),
+  pagarMe: require('../index')('ak_test_P2Oa5d0z96j8O84QBia8A8jbphmWi6'),
 
   getApiKey: function () {
-    return 'ak_test_wk9GE9OuuXKNd9o7H3u1RxFCFsApw8';
+    return 'ak_test_P2Oa5d0z96j8O84QBia8A8jbphmWi6';
   },
 
   getTransactionObj: function (params) {
