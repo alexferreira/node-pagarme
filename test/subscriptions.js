@@ -6,7 +6,7 @@ var should        = require('should'),
     PagarMe       = utils.pagarMe,
     subscriptions = PagarMe.subscriptions,
     plans         = PagarMe.plans,
-    card          = PagarMe.card;
+    card          = PagarMe.card_hash;
 
 var info = {};
 
@@ -35,7 +35,7 @@ describe('Subscription', function () {
   it('should be able to create a subscription with a card', function (done) {
     var planCreateP = plans.create(utils.getPlanObj());
 
-    var cardP = card._hash(_.omit(utils.getTransactionObj(), 'amount'));
+    var cardP = card._get(_.omit(utils.getTransactionObj(), 'amount'));
 
     var subscriptionCreateP =  cardP.then(function (result) {
       return planCreateP.then(function(plan){

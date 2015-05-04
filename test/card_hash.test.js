@@ -6,14 +6,14 @@ var Promise = require('bluebird');
 var _ = require('lodash');
 var utils = require('./utils');
 var PagarMe = utils.pagarMe;
-var card = PagarMe.card;
+var card = PagarMe.card_hash;
 
 var info = {};
 
 describe('Card', function () {
   
   it('should not be able to create a card hash without a card number', function (done) {
-    card._hash(
+    card._get(
       {
         card_holder_name: 'Alex Ferreira',
         card_expiration_date: '0319',
@@ -26,7 +26,7 @@ describe('Card', function () {
   });
 
   it('should not be able to create a card hash without a card holder name', function (done) {
-    card._hash(
+    card._get(
       {
         card_number: '5453010000066167', 
         card_expiration_date: '0319',
@@ -39,7 +39,7 @@ describe('Card', function () {
   });
 
   it('should not be able to create a card hash without a card expiration date', function (done) {
-    card._hash(
+    card._get(
       {
         card_number: '5453010000066167', 
         card_holder_name: 'Alex Ferreira',
@@ -52,7 +52,7 @@ describe('Card', function () {
   });
 
   it('should not be able to create a card hash without a card cvv', function (done) {
-    card._hash(
+    card._get(
       {
         card_number: '5453010000066167',
         card_holder_name: 'Alex Ferreira',
@@ -65,7 +65,7 @@ describe('Card', function () {
   });
 
   it('should not be able to create with no card parameters', function (done) {
-    card._hash({ })
+    card._get({ })
       .catch(function (err) {
         err.length.should.be.equal(5);
         done();
@@ -74,7 +74,7 @@ describe('Card', function () {
 
 
   it('should be able to create a card hash', function (done) {
-    card._hash(
+    card._get(
       {
         card_number: '5453010000066167',
         card_holder_name: 'Alex Ferreira',
@@ -88,4 +88,3 @@ describe('Card', function () {
   });
 
 });
-
