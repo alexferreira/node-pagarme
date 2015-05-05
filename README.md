@@ -1,6 +1,6 @@
 # node-pagarme
 
-A module that provides Pagar.me service integration on a nodeJS module. 
+A module that provides Pagar.me service integration on nodeJS apps. 
 
 Usage: 
 
