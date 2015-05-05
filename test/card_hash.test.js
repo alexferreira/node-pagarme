@@ -1,4 +1,4 @@
-//card.test.js
+//card_hash.test.js
 'use strict';
 
 var should = require('should');
@@ -10,7 +10,7 @@ var card = PagarMe.card_hash;
 
 var info = {};
 
-describe('Card', function () {
+describe('Card Hash', function () {
   
   it('should not be able to create a card hash without a card number', function (done) {
     card._get(
