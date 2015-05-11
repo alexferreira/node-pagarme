@@ -1,12 +1,12 @@
 'use strict';
 
-var _ = require('underscore');
+var _ = require('lodash');
 
 var utils = module.exports = {
-  pagarMe: require('../index')('ak_test_wk9GE9OuuXKNd9o7H3u1RxFCFsApw8'),
+  pagarMe: require('../index')('ak_test_P2Oa5d0z96j8O84QBia8A8jbphmWi6'),
 
   getApiKey: function () {
-    return 'ak_test_wk9GE9OuuXKNd9o7H3u1RxFCFsApw8';
+    return 'ak_test_P2Oa5d0z96j8O84QBia8A8jbphmWi6';
   },
 
   getTransactionObj: function (params) {
@@ -62,13 +62,9 @@ var utils = module.exports = {
   getSubscriptionObj: function(params){
     return _.extend({
       customer: {
-        email: 'alex@dsol.com.br',
+        email: 'test@test.com',
       },
       card_hash: '123754_kBeJDCMuXteI8z8kAeSktRsbmm1WElYgqJ2N6KjQ0PltT71yNJSxOjvp9X526o/Ex3ns0NtgghL8e30G97kto3jQENnyPVer7pqJSyrIHP+Z3fo5DT83N+5BPBfoqMFIbPitTAD32KRqkbeXpus5lfQ6S662oejnwcGkMQtIpiBrEd57olFC8hLKNTwtQFR6wtXv5/8fODLS+GLkAkuqDtKpzgpgsJEavH2J4G+AvIV1vtKDX7uL9utUWWbtBgtZfJ8/GV3kJ0DNlfjoZgLETT13ODYoJYX+nexuBSlJxE6A8I5NLCEeYGIRusf2RZPG5Dtze1OWZwEDx7tqhEmS0Q=='
     }, params);
   }
-
 };
-
-
-
